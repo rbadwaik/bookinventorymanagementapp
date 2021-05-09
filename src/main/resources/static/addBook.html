@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link type="text/css" rel="stylesheet" href="/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="/custom.css">
+
+<script src="/jquery-2.2.4.min.js"></script>
+<script src="/bootstrap.min.js"></script>
+<script src="/addBook.js"></script> 
+<title>Book Management System</title>
+</head>
+
+<body>
+	<br>
+	<div class="label label-default text-center">
+		<h3>
+			<span class="label label-default">Welcome To Book Inventory
+				Management System</span>
+		</h3>
+	</div>
+	<br>
+	<div class="row justify-content-md-center">
+		<div class="pl-4">
+		
+			<span class="label label-default" style="float: left; padding-right: 10px;">
+				<form class="form">
+					<input type="button" id="index_button"
+						class="btn btn-primary btn-large" 
+						onclick="redirectToIndex('index.html')"
+						value="See all the books">
+				</form>
+			</span> 
+			
+			<span class="label label-default" style="float: left; padding-right: 10px;">
+				<form class="form" action="/searchBook.html">
+					<input type="submit" id="searchBookButton"
+						class="btn btn-primary btn-large" value="Search a book">
+				</form>
+			</span> 
+			
+			<span class="label label-default"
+				style="float: left; padding-right: 10px;">
+				<form class="form" >
+					<input type="submit" id="spr_story_model_bttn" style="background-color: green"
+						class="btn btn-primary btn-large" value="Add a new book">
+				</form>
+			</span> 
+			
+			<span class="label label-default"
+				style="float: left; padding-right: 10px;">
+				<form class="form"  action="/updateBook.html" >
+					<input type="submit" id="spr_story_model_bttn"
+						class="btn btn-primary btn-large" value="Update an existing book">
+				</form>
+			</span> 
+			<span class="label label-default" style="float: left; padding-right: 10px;">
+				<form class="form" action="/deleteBook.html">
+					<input type="submit" id="spr_story_model_bttn"
+						class="btn btn-primary btn-large" value="Delete a book">
+				</form>
+			</span>
+			<span class="label label-default"
+				style="float: left; padding-right: 10px;">
+				<form class="form"  action="/searchOnGoogleBooks.html" >
+					<input type="submit" id="spr_story_model_bttn"
+						class="btn btn-primary btn-large" value="Search On Google Books">
+				</form>
+			</span> 
+		</div>
+	</div>
+
+
+	<div style="padding-top: 50px; padding-right: 150px; padding-bottom: 50px; padding-left: 150px;">
+		<form id="formAddBook" class="form">
+			<h6>
+				<span class="label label-default">Add a Book to the Inventory: </span>
+			</h6>
+			<input type="text" id="bookId" name="bookId" class="form-control"
+				placeholder="Book's id" required="required"> 
+			<input type="text"
+				id="bookName" name="bookName" class="form-control"
+				placeholder="Book's Name" required="required"> 
+			<input type="text"
+				id="quantity" name="quantity" class="form-control"
+				placeholder="Quantity" required="required">
+				
+			<div class="col-md-3 label mx-auto" style="padding-top: 20px; padding-bottom: 20px;">
+				<input type="submit" id="btn" class="btn btn-primary btn-large"
+					value="Add Book">
+			</div>
+			<div class="col-md-9 mx-left">
+				<div class="alert alert-success" id="myalert" role="alert">
+					<div id="results"></div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

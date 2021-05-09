@@ -1,0 +1,16 @@
+Prerequisite:
+1. Java 8 or higher
+2. IDE: Eclipse or IntelliJ
+3. Maven 
+
+Steps to run:
+1. Import the project as an Existing Maven project
+2. Right click on project > Run as > Maven clean
+3. Right click on project > Run as > Maven Install
+4. Open BookInventoryManagementApplication.java
+5. Right click and > Run as > Java Application
+6. You can access the application from browser: http://localhost:8080/index.html
+
+Assumptions:
+1. Assumed to have in memory database to reduce further dependencies.
+2. Pre-loaded few data records in Book table. That can be found in src/main/resources/data.sql
